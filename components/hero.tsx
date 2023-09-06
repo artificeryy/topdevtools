@@ -2,7 +2,7 @@ import { BsRocketTakeoff } from "react-icons/bs"
 
 export default function Hero() {
     return (
-        <div className="container mt-10">
+        <div className="container mt-10 flex flex-col items-center">
             <header className="font-bold text-5xl">
                 Build Products Fast <BsRocketTakeoff className="inline" />
             </header>

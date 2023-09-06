@@ -13,7 +13,7 @@ export default function MainNav() {
                 <div>
                     <nav className="flex items-center">
                         <a target="_blank" href="https://twitter.com/artificery_">
-                            <div className="flex flex-row items-center justify-center rounded-md font-medium hover:bg-accent hover:text-accent-foreground py-2 px-2 duration-200">
+                            <div className="flex flex-row items-center justify-center rounded-md font-medium hover:bg-accent hover:text-accent-foreground py-2 px-4 duration-200">
                                 <BsTwitter className="inline text-xl" />
                                 <span className="ml-1">@artificery_</span>
                             </div>
