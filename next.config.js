@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const { MAIN_URL } = "topdev.tools"
+const { MAIN_URL } = "https://topdev.tools"
 const nextConfig = {
     async rewrites() {
         return [
