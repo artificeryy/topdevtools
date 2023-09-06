@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-const MAIN_URL = "https://topdev.tools"
+const { FONTCHROMA_URL } = process.env
+
 const nextConfig = {
     async rewrites() {
         return [
@@ -10,11 +11,11 @@ const nextConfig = {
             },
             {
                 source: '/fontchroma',
-                destination: `${MAIN_URL}/fontchroma`,
+                destination: `${FONTCHROMA_URL}/fontchroma`,
             },
             {
                 source: '/fontchroma/:path*',
-                destination: `${MAIN_URL}/fontchroma/:path*`,
+                destination: `${FONTCHROMA_URL}/fontchroma/:path*`,
             },
         ]
     },
