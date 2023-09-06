@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { BsTools, BsTwitter } from "react-icons/bs"
 
 export default function MainNav() {
@@ -5,10 +6,10 @@ export default function MainNav() {
         <header className="border-b">
             <div className="container flex h-14 items-center justify-between">
                 <div>
-                    <a href="/" className="flex flex-row items-center">
+                    <Link href="/" className="flex flex-row items-center">
                         <BsTools className="inline" />
                         <span className="ml-2 text-xl font-extrabold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%">TopDev.tools</span>
-                    </a>
+                    </Link>
                 </div>
                 <div>
                     <nav className="flex items-center">
