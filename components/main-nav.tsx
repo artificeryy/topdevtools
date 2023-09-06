@@ -1,4 +1,4 @@
-import { BsTools, BsTwitter, BsGithub } from "react-icons/bs"
+import { BsTools, BsTwitter } from "react-icons/bs"
 
 export default function MainNav() {
     return (
@@ -7,7 +7,7 @@ export default function MainNav() {
                 <div>
                     <a href="/" className="flex flex-row items-center">
                         <BsTools className="inline" />
-                        <span className="ml-2 text-xl font-bold">TopDev.tools</span>
+                        <span className="ml-2 text-xl font-extrabold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%">TopDev.tools</span>
                     </a>
                 </div>
                 <div>
