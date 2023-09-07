@@ -22,10 +22,10 @@ interface Card {
 
 export default function ToolCard({ name, desc, demoPath, link, tags }: Card) {
     return (
-        <div className="mr-5 mt-5">
-            <Card className="w-[350px]">
+        <div className="sm:mr-5 mt-5">
+            <Card className="w-full sm:w-[350px]">
                 <CardHeader>
-                    <Link href={link}>
+                    <Link href={link} placeholder="blur">
                         <CardTitle>{name}<BsLink45Deg className="inline ml-1" /></CardTitle>
                     </Link>
                     <CardDescription>{desc}</CardDescription>
@@ -34,9 +34,11 @@ export default function ToolCard({ name, desc, demoPath, link, tags }: Card) {
                     <Image src={demoPath} alt="demo" width="533" height="300" className="rounded-md" />
                 </CardContent>
                 <CardFooter >
-                    {tags.map((tag, index) => {
-                        return <Badge key={index} variant={tag} className="mr-1.5">{tag}</Badge>
-                    })}
+                    <div className="flex flex-row flex-wrap gap-y-1">
+                        {tags.map((tag, index) => {
+                            return <Badge key={index} variant={tag} className="mr-1.5">{tag}</Badge>
+                        })}
+                    </div>
                 </CardFooter>
             </Card>
         </div>
