@@ -7,7 +7,7 @@ export default function Tools() {
                 name="Project Manager"
                 desc="FREE Notion template to manage your projects and tasks as a developer"
                 demoPath="/demos/project_manager_demo.png"
-                link="https://artificery.gumroad.com/l/project_manager"
+                link="https://artificery.gumroad.com/l/projectmanager"
                 tags={["management"]}
             />
             <ToolCard
