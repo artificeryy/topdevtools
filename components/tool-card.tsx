@@ -14,7 +14,7 @@ import Link from "next/link"
 
 interface Card {
     name: string
-    desc: string
+    desc: string[]
     demoPath: string
     link: string
     tags: string[]
@@ -28,15 +28,19 @@ export default function ToolCard({ name, desc, demoPath, link, tags }: Card) {
                     <Link href={link} placeholder="blur">
                         <CardTitle>{name}<BsLink45Deg className="inline ml-1" /></CardTitle>
                     </Link>
-                    <CardDescription>{desc}</CardDescription>
+                    <CardDescription>
+                        {desc.map((para, idx) => {
+                            return <p key={idx}>{para}</p>
+                        })}
+                    </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Image src={demoPath} alt="demo" width="533" height="300" className="rounded-md" />
                 </CardContent>
                 <CardFooter >
                     <div className="flex flex-row flex-wrap gap-y-1">
-                        {tags.map((tag, index) => {
-                            return <Badge key={index} variant={tag} className="mr-1.5">{tag}</Badge>
+                        {tags.map((tag, idx) => {
+                            return <Badge key={idx} variant={tag} className="mr-1.5">{tag}</Badge>
                         })}
                     </div>
                 </CardFooter>
