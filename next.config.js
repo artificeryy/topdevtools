@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const { FONTCHROMA_URL } = process.env
+const { FONTCHROMA_URL, PROJMANAGER_URL } = process.env
 
 const nextConfig = {
   async rewrites() {
@@ -17,6 +17,10 @@ const nextConfig = {
         source: '/fontchroma/:path*',
         destination: `${FONTCHROMA_URL}/fontchroma/:path*`,
       },
+      {
+        source: '/projmanager',
+        destination: `${PROJMANAGER_URL}`
+      }
     ]
   },
 }
