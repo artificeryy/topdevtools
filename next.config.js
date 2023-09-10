@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const { PERMANENT_REDIRECT_STATUS } = require('next/dist/shared/lib/constants')
+
 const { FONTCHROMA_URL, PROJMANAGER_URL } = process.env
 
 const nextConfig = {
@@ -17,10 +19,6 @@ const nextConfig = {
         source: '/fontchroma/:path*',
         destination: `${FONTCHROMA_URL}/fontchroma/:path*`,
       },
-      {
-        source: '/projmanager',
-        destination: `${PROJMANAGER_URL}`
-      }
     ]
   },
 }
