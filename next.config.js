@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const { PERMANENT_REDIRECT_STATUS } = require('next/dist/shared/lib/constants')
-
-const { FONTCHROMA_URL, PROJMANAGER_URL } = process.env
+const { FONTCHROMA_URL, FASTMVP_URL } = process.env
 
 const nextConfig = {
   async rewrites() {
@@ -18,6 +16,14 @@ const nextConfig = {
       {
         source: '/fontchroma/:path*',
         destination: `${FONTCHROMA_URL}/fontchroma/:path*`,
+      },
+      {
+        source: '/fastmvp',
+        destination: `${FASTMVP_URL}/fastmvp`,
+      },
+      {
+        source: '/fastmvp/:path*',
+        destination: `${FASTMVP_URL}/fastmvp/:path*`,
       },
     ]
   },

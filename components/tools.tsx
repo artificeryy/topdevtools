@@ -15,6 +15,13 @@ export default function Tools() {
     return (
         <div className="container mt-2 sm:mt-7 flex flex-col justify-center sm:flex-row sm:flex-wrap sm:justify-normal">
             <ToolCard
+                name="FastMVP"
+                desc={["Know the exact MVP specs to validate your product. Stop building products no one wants."]}
+                demoPath="/demos/fastmvp.png"
+                link="/fastmvp"
+                tags={["mvp"]}
+            />
+            <ToolCard
                 name="Proj Manager for Devs"
                 desc={["Juggling too many tasks as a dev? FREE Notion template to manage your projects and tasks so you can focus more on building"]}
                 demoPath="/demos/project_manager_demo.png"

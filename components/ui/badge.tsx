@@ -19,7 +19,8 @@ const badgeVariants = cva(
                 develop: "border-transparent bg-fuchsia-600 text-primary-foreground",
                 ship: "border-transparent bg-orange-500 text-primary-foreground",
                 frontend: "border-transparent bg-green-500 text-primary-foreground",
-                management: "border-transparent bg-purple-600 text-primary-foreground"
+                management: "border-transparent bg-purple-600 text-primary-foreground",
+                mvp: "border-transparent bg-green-600 text-primary-foreground"
             },
         },
         defaultVariants: {
