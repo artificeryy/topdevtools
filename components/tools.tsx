@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function Tools() {
     const [isMounted, setIsMounted] = useState(false);
+    const { FONTCHROMA_URL, FASTMVP_URL } = process.env
 
     useEffect(() => {
         setIsMounted(true);
@@ -18,7 +19,7 @@ export default function Tools() {
                 name="FastMVP"
                 desc={["Know the exact MVP specs to validate your product. Stop building products no one wants."]}
                 demoPath="/demos/fastmvp.png"
-                link="/fastmvp"
+                link={FASTMVP_URL ? FASTMVP_URL : "https://fastmvp.topdev.tools/"}
                 tags={["mvp"]}
             />
             <ToolCard
@@ -32,7 +33,7 @@ export default function Tools() {
                 name="FontChroma"
                 desc={["Visualize your color palettes and fonts instantly on this web app"]}
                 demoPath="/demos/fontchroma.gif"
-                link="/fontchroma"
+                link={FONTCHROMA_URL ? FONTCHROMA_URL : "https://fontchroma.topdev.tools/"}
                 tags={["design", "frontend"]}
             />
         </div>
